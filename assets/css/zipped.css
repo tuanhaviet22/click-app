@@ -1,7 +1,9 @@
-@import url('./bootstrap.min.css');
-@import url('./elegent-icons.css');
-@import url('./main.css');
-@import url('./plugins.css');
-@import url('./seeding-facebook.css');
-@import url('./toc.css');
-@import url('./font-awesome.min.css');
+@import url("./animate.min.css");
+@import url("./bootstrap.min.css");
+@import url("./custom.css");
+@import url("./fontawesome-all.min.css");
+@import url("./mystyle.css");
+@import url("./plugins.css");
+@import url("./responsive.css");
+@import url("./slick.css");
+@import url("./style.css");

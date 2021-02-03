@@ -10,7 +10,7 @@
 	*Mobile Menu Activatin
 	***********************/
 
-	var mainMenuNav = $('.main-navigation');
+	/*var mainMenuNav = $('.main-navigation');
 	mainMenuNav.meanmenu({
 	    meanScreenWidth: '1220',
 	    meanMenuContainer: '.mobile-menu',
@@ -18,7 +18,7 @@
 	    meanMenuOpen: '<span class="menu-bar"></span>',
 	    meanRevealPosition: 'right',
 	    meanMenuCloseSize: '0',
-	});
+	});*/
 
 	/**********************
 	*Verical Menu Expand
@@ -177,13 +177,7 @@
 			}
 		]
 	});
-
-
-
-
-
-
-
+	
 	$('.product-tab__link').on('click', function(){
 		var parent = $(this).parent('.product-tab__item');
 		parent.addClass('active');
@@ -392,6 +386,59 @@
 			$('.search-hide').fadeToggle('slow');
 		});
 	}
+	
+	//Slider
+	
+	var btn_slide_next = '>';
+	var btn_slide_prev = '<';
+	
+    $('.one-slider').slick({
+        autoplay: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: false,
+        infinite: true,
+        nextArrow: '<button class="slide-next">' + btn_slide_next + '</button>',
+        prevArrow: '<button class="slide-prev">' + btn_slide_prev + '</button>',
+        responsive: [
+          {
+            breakpoint: 1200,
+            settings: {
+              slidesToShow: 1,
+            }
+          },
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 1,
+            }
+          }
+        ]
+    });
+	
+    $('.three-slider').slick({
+        autoplay: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        dots: false,
+        infinite: true,
+        nextArrow: '<button class="slide-next">' + btn_slide_next + '</button>',
+        prevArrow: '<button class="slide-prev">' + btn_slide_prev + '</button>',
+        responsive: [
+          {
+            breakpoint: 1200,
+            settings: {
+              slidesToShow: 2,
+            }
+          },
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 1,
+            }
+          }
+        ]
+    });
 
 
 	/**********************
@@ -411,7 +458,7 @@
 			{
 				breakpoint: 991,
 				settings: {
-					slidesToShow: 3
+					slidesToShow: 2
 				}
 			},
 			{
@@ -435,9 +482,10 @@
 	***********************/
 	$('.js-product-carousel-2').slick({
 		slidesToShow: 3,
-		arrows: true,
-		prevArrow: '<span class="slick-btn slick-prev"><i class="fa fa-angle-left"></i></span>',
-		nextArrow: '<span class="slick-btn slick-next"><i class="fa fa-angle-right"></i></span>',
+		dots: true,
+		arrow: false,
+        nextArrow: '',
+        prevArrow: '',
 		responsive: [{
 				breakpoint: 1200,
 				settings: {
@@ -448,17 +496,11 @@
 			{
 				breakpoint: 991,
 				settings: {
-					slidesToShow: 3
-				}
-			},
-			{
-				breakpoint: 767,
-				settings: {
 					slidesToShow: 2
 				}
 			},
 			{
-				breakpoint: 480,
+				breakpoint: 767,
 				settings: {
 					slidesToShow: 1
 				}
@@ -473,8 +515,8 @@
 		slidesToShow: 3,
 		slidesToScroll: 1,
 		arrows: true,
-		prevArrow: '<span class="slick-btn slick-prev"><i class="fa fa-angle-left"></i></span>',
-		nextArrow: '<span class="slick-btn slick-next"><i class="fa fa-angle-right"></i></span>',
+        nextArrow: '<button class="slide-next">' + btn_slide_next + '</button>',
+        prevArrow: '<button class="slide-prev">' + btn_slide_prev + '</button>',
 		responsive: [{
 				breakpoint: 1200,
 				settings: {
@@ -488,7 +530,7 @@
 				}
 			},
 			{
-				breakpoint: 576,
+				breakpoint: 768,
 				settings: {
 					slidesToShow: 1
 				}
@@ -504,8 +546,8 @@
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		arrows: true,
-		prevArrow: '<span class="slick-btn slick-prev"><i class="fa fa-angle-left"></i></span>',
-		nextArrow: '<span class="slick-btn slick-next"><i class="fa fa-angle-right"></i></span>',
+        nextArrow: '<button class="slide-next">' + btn_slide_next + '</button>',
+        prevArrow: '<button class="slide-prev">' + btn_slide_prev + '</button>',
 	});
 
 
@@ -515,8 +557,8 @@
 	***********************/
 
 	$('#product-slider').slick({
-		prevArrow: '<i class="fa fa-angle-left slick-prev slick-btn"></i>',
-		nextArrow: '<i class="fa fa-angle-right slick-next slick-btn"></i>',
+        nextArrow: '<button class="slide-next">' + btn_slide_next + '</button>',
+        prevArrow: '<button class="slide-prev">' + btn_slide_prev + '</button>',
 		slidesToShow: 3,
 		responsive: [
 			{
@@ -542,11 +584,12 @@
 	***********************/
 
 	$('#thumbmenu-horizontal').slick({
+        autoplay: true,
 		slidesToShow: 4,
-		arrows: true,
+		arrows: false,
 		infinite: true,
-		prevArrow: '<i class="fa fa-angle-left slick-prev slick-btn"></i>',
-		nextArrow: '<i class="fa fa-angle-right slick-next slick-btn"></i>',
+        nextArrow: '<button class="slide-next">' + btn_slide_next + '</button>',
+        prevArrow: '<button class="slide-prev">' + btn_slide_prev + '</button>',
 		responsive: [{
 				breakpoint: 1200,
 				settings: {
@@ -587,8 +630,8 @@
 		slidesToScroll: 1,
 		arrows: true,
 		infinite: true,
-		prevArrow: '<i class="fa fa-angle-up slick-prev slick-btn"></i>',
-		nextArrow: '<i class="fa fa-angle-down slick-next slick-btn"></i>',
+        nextArrow: '<button class="slide-next">' + btn_slide_next + '</button>',
+        prevArrow: '<button class="slide-prev">' + btn_slide_prev + '</button>',
 		vertical: true,
 		responsive: [{
 				breakpoint: 1200,

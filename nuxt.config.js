@@ -20,12 +20,12 @@ export default {
         hid: 'description',
         name: 'description',
         content:
-          'Goldkarat - Nâng tầm đẳng cấp'
+          'Click - This is description'
       },
       {
         hid: 'keywords',
         name: 'keywords',
-        content: ''
+        content: 'Click - This is keywords'
       }
     ],
     link: [
@@ -76,7 +76,7 @@ export default {
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {
-    baseURL: 'http://goldkarat.tuanha.asia',
+    baseURL: 'http://127.0.0.1:8000',
     headers : {
       // Authorization: "Bearer 612LT8gJZHM1obd1C8jmF7ZAiLKLxnLdjyebd7uHjFblS7PbR63WDIXgbZHG3weUwZhKhELVIvsurDfp"
     }
@@ -97,7 +97,6 @@ export default {
   server: {
     host: '0.0.0.0',
   },
-  mode: "universal",
   env: {
     baseUrl: process.env.BASE_URL || 'http://localhost:3000'
   }

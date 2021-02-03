@@ -1,0 +1,89 @@
+
+#adminbar {
+  direction: ltr;
+  color: #ccc;
+  font-size: 13px;
+  font-weight: 400;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  line-height: 2.46153846;
+  height: 32px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-width: 600px;
+  z-index: 999;
+  background-color: var(--primary-bold-second);
+  padding: 0 10px;
+  display: flex;
+  border-bottom: 1px solid var(--primary-bold-first);;
+}
+
+#adminbar .function {
+  width: 50%;
+}
+
+#adminbar .user {
+  width: 50%;
+
+}
+
+#adminbar .user {
+  justify-content: flex-end;
+}
+
+#adminbar ul {
+  display: flex;
+  list-style: none;
+}
+
+#adminbar a {
+  color: white !important;
+  display: block;
+}
+
+#adminbar a svg {
+  width: 15px;
+  margin-top: -4px;
+  margin-right: 4px;
+}
+
+#adminbar ul li {
+  text-align: center;
+  padding: 0 5px;
+  position: relative;
+}
+
+#adminbar ul li.name-website {
+  padding: 0 20px;
+}
+
+#adminbar ul li:hover {
+  background: #3cb2e45e;
+  color: var(--white);
+}
+
+#adminbar ul li:hover .subbar {
+  display: block;
+}
+
+#adminbar .subbar {
+  display: none;
+  background-color: var(--primary-bold-second);
+  position: absolute;
+  top: 32px;
+  left: 0;
+  width: 15rem;
+  padding: 0;
+}
+
+#adminbar .subbar li {
+  text-align: left;
+  padding: 0 10px;
+}
+
+@media only screen and (max-width: 1024px) {
+  #adminbar {
+    display: none;
+  }
+}
