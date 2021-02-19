@@ -1,16 +1,22 @@
 <template>
-  <div class="__app">
-    <div v-for="module in handleArrayModule">
-      <Banner :id="module.id" v-if="module.type == 'banner'" />
-      <BannerCategory :id="module.id" v-if="module.type == 'banner-category'" />
-      <Statistic :id="module.id" v-if="module.type == 'statistic'" />
-      <Features :id="module.id" v-if="module.type == 'features'" />
-      <Procedure :id="module.id" v-if="module.type == 'procedure'" />
-      <Customer :id="module.id" v-if="module.type == 'customer'" />
-      <Partner :id="module.id" v-if="module.type == 'partner'" />
-      <Benefits :id="module.id" v-if="module.type == 'benefits'" />
-      <Intro_editor :id="module.id" v-if="module.type == 'intro_editor'"/>
-      <Post :id="module.id" v-if="module.type == 'post'" />
+  <div class='__app'>
+    <div v-for='module in handleArrayModule'>
+      <Banner :id='module.id' v-if="module.type == 'banner'" />
+      <BannerCategory :id='module.id' v-if="module.type == 'banner-category'" />
+      <Statistic :id='module.id' v-if="module.type == 'statistic'" />
+      <Features :id='module.id' v-if="module.type == 'features'" />
+      <Procedure :id='module.id' v-if="module.type == 'procedure'" />
+      <Customer :id='module.id' v-if="module.type == 'customer'" />
+      <Partner :id='module.id' v-if="module.type == 'partner'" />
+      <Benefits :id='module.id' v-if="module.type == 'benefits'" />
+      <History :id='module.id' v-if="module.type == 'history'" />
+      <Intro :id='module.id' v-if="module.type == 'intro'" />
+      <Personnel :id='module.id' v-if='module.type =="personnel"' />
+      <Price :id='module.id' v-if='module.type =="price"' />
+      <CoreValue :id='module.id' v-if='module.type =="price"' />
+      <!--      <Intro_editor :id="module.id" v-if="module.type == 'intro_editor'"/>-->
+      <Mission :id='module.id' v-if='module.type =="mission"'/>
+      <Post :id='module.id' v-if="module.type == 'post'" />
     </div>
   </div>
 </template>
@@ -27,9 +33,27 @@ import Customer from '@/components/LandingPage/customer'
 import Partner from '@/components/LandingPage/partner'
 import Benefits from '@/components/LandingPage/benefits'
 import Intro_editor from '@/components/LandingPage/intro_editor'
-
+import History from '@/components/LandingPage/history'
+import Intro from '@/components/LandingPage/intro'
+import Mission from  '@/components/LandingPage/mission'
+import CoreValue from  '@/components/LandingPage/cores_value'
 export default {
-  components: { Intro_editor, Benefits, Partner, Customer, Procedure, Features, Statistic, BannerCategory, Banner, Post },
+  components: {
+    Intro_editor,
+    Benefits,
+    Partner,
+    Customer,
+    Procedure,
+    Features,
+    Statistic,
+    BannerCategory,
+    Banner,
+    Post,
+    History,
+    Intro,
+    Mission,
+    CoreValue
+  },
   data() {
     return {
       info: {},
